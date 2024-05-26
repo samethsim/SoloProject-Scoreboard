@@ -5,6 +5,7 @@ let scoreGuest = getEl("score-guest");
 let homeScore=0;
 let guestScore=0;
 
+// Event listener
 getEl("home-1-btn").addEventListener("click", ()=>{
     addScore(scoreHome,1)
 })
@@ -20,11 +21,13 @@ getEl("guest-1-btn").addEventListener("click", ()=>{
     addScore(scoreGuest,1)
 })
 getEl("guest-2-btn").addEventListener("click", ()=>{
-    addScore(scoreGuest,1)
+    addScore(scoreGuest,2)
 })
 getEl("guest-3-btn").addEventListener("click", ()=>{
-    addScore(scoreGuest,1)
+    addScore(scoreGuest,3)
 })
+
+// functions
 function getEl(id) {
     return document.getElementById(`${id}`);
 }
@@ -38,5 +41,4 @@ function addScore(elementId,points) {
         guestScore += points;
         elementId.textContent = guestScore;
     }
-    
 }
